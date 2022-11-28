@@ -1,0 +1,7 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1>Name : {{change_detail.name}}
+<br>
+<a href="{% url 'mainapp:change' change_detail.pk %}" class="btn btn-info" >Change name</a><a style="margin-left:10px;" href="{{change_detail.get_absolute_url_del}}" class="btn btn-info" >Delete...</a></h1>
+{% endblock content %}
+

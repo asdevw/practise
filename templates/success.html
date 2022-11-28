@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block content %}
+<br>
+{% if messages %}
+{% for message in messages %}
+    {{message}}
+{% endfor %}
+{% else %}
+WTF
+{% endif %}
+<br>
+<a href="{% url 'mainapp:home' %}" class="btn btn-info" >Back to home</a>
+{% endblock content %}
+

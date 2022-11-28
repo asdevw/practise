@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block content %}
+    <br/>
+    <div class="form-control">
+        <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            {{form.as_p}}
+            <h1>Name :{{delete.name}}</h1>
+            <button class="btn btn-secondary">delete post</button>
+        </form>
+    </div>
+{% if messages %}
+{% for message in messages %}
+    {{message}}
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}
